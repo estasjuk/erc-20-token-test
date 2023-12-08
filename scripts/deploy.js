@@ -12,9 +12,8 @@ async function main() {
   // Deploy the contract
   console.log('Deploying TestErcToken...');
   const testErcToken = await TestErcToken.deploy();
-  console.log(testErcToken)
-  await testErcToken.waitForDeployment();
-  console.log("TestErcToken deployed to", await testErcToken.getAddress())
+  await testErcToken.deployed();
+  console.log("TestErcToken deployed to", await testErcToken.address)
 }
 
 main()
